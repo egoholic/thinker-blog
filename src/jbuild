@@ -1,0 +1,15 @@
+(jbuild_version 1)
+
+(executable
+ ((name blog)
+  (libraries (tls
+              cohttp
+              cohttp-lwt
+              cohttp-lwt-unix
+              lwt
+              core_kernel
+              js_of_ocaml
+              tyxml
+              ezpostgresql))
+  (preprocess (pps (ppx_jane)))
+ ))
